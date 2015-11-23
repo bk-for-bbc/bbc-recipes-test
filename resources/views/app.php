@@ -2,6 +2,7 @@
 <html ng-app="bbc-recipes">
     <head>
         <title>BBC Recipes</title>
+        <base href="/"></base>
         <link rel="stylesheet" href="/css/app.css"></link>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     </head>
@@ -14,9 +15,7 @@
                 </a>
             </div>
         </header>
-        <div class="container--main">
-            <bbc-recipes-index></bbc-recipes-index>
-        </div>
+        <div class="container--main" ui-view></div>
         <script type="text/javascript" src="/js/index.js"></script>
     </body>
 </html>
