@@ -1,0 +1,18 @@
+.container--main {
+    width: 100%;
+    max-width: 1124px;
+    margin: 0 auto;
+    padding: 0 $grid-gutter-width / 2;
+}
+
+img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+}
+
+h2 {
+    border-bottom: 1px solid $gray-lighter;
+    padding-bottom: $grid-gutter-width / 2;
+    margin-bottom: $grid-gutter-width;
+}

@@ -1,2 +1,14 @@
-// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+$headings-font-family: 'Lato', 'Helvetica', sans-serif;
+$headings-font-weight: 300;
 
+$header-color-start: #FF9D2C;
+$header-color-end: #EE5C00;
+$brand-primary: $header-color-end;
+
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import url(https://fonts.googleapis.com/css?family=Lato:300);
+
+@import "components/_header";
+@import "components/_recipes";
+
+@import "layouts/_global";
