@@ -12,8 +12,12 @@
 */
 
 Route::group(['prefix' => 'api'], function() {
-    Route::get('recipes', function ()    {
+    Route::get('recipes', function() {
         return App\Recipe::with('ingredients')->get();
+    });
+
+    Route::get('recipes/{slug}', function($slug) {
+        return App\Recipe::where('slug', $slug)->with('ingredients')->firstOrFail();
     });
 });
 
