@@ -62,10 +62,10 @@ app.component('bbcRecipePage', {
         });
     },
     template: `
-    <div ng-if="bbcRecipePage.found">
+    <div ng-if="bbcRecipePage.found === true">
         {{ bbcRecipePage.recipe }}
     </div>
-    <div class="warning--empty" ng-if="!bbcRecipePage.found">
+    <div class="warning--empty" ng-if="bbcRecipePage.found === false">
         Sorry, this recipe doesn't exist or may have been removed
     </div>`
 });
