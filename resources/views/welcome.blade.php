@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="bbc-recipes">
     <head>
-        <title>Laravel</title>
+        <title>BBC Recipes</title>
 
         <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
 
@@ -38,8 +38,11 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Laravel 5</div>
+                <h1>Hello</h1>
+                <hello-world></hello-world>
             </div>
         </div>
+
+        <script type="text/javascript" src="/js/index.js"></script>
     </body>
 </html>
