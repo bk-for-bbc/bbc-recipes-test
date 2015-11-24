@@ -65,3 +65,39 @@ h2 {
         }
     }
 }
+
+.nav-tabs {
+    display: flex;
+    margin-bottom: $grid-gutter-width / 2;
+    align-items: center;
+
+    > li {
+        display: flex;
+    }
+}
+
+.search--hold {
+    position: relative;
+    margin-left: 15px;
+
+    i {
+        position: absolute;
+        color: $gray-light;
+        top: 50%;
+        left: 0;
+        transform: translateY(-55%);
+        pointer-events: none;
+    }
+}
+
+.search--input {
+    padding: 5px 5px 5px 20px;
+    font-size: $font-size-base;
+    border: none;
+    background: none;
+
+    &:focus {
+        border: none;
+        outline: none;
+    }
+}
