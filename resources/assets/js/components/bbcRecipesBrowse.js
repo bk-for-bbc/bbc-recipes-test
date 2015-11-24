@@ -59,7 +59,12 @@ app.component('bbcRecipesBrowse', {
     </div>
     <div ng-if="bbcRecipesBrowse.recipes !== undefined || bbcRecipesBrowse.found === false">
         <div class="warning--empty" ng-if="bbcRecipesBrowse.found === false || !(bbcRecipesBrowse.recipes | filter:bbcRecipesBrowse.search).length">
-            Sorry, we currently have no recipes for you
+            <span ng-if="bbcRecipesBrowse.starred === true">
+                Sorry, you don't currently have any starred recipes, get started by starring recipes you like
+            </span>
+            <span ng-if="bbcRecipesBrowse.starred === false">
+                Sorry, we currently have no recipes for you
+            </span>
         </div>
         <div class="recipes--list block-grid-xs-1 block-grid-sm-3 block-grid-md-4">
             <bbc-recipe-card item="recipe" ng-repeat="recipe in bbcRecipesBrowse.recipes | filter:bbcRecipesBrowse.search | fromPage:bbcRecipesBrowse.page:bbcRecipesBrowse.perPage"></bbc-recipe-card>
