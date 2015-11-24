@@ -1,9 +1,12 @@
 $headings-font-family: 'Lato', 'Helvetica', sans-serif;
 $headings-font-weight: 300;
 
+$nav-link-hover-bg: #fff;
+
 $header-color-start: #FF9D2C;
 $header-color-end: #EE5C00;
 $brand-primary: $header-color-end;
+$link-hover-color: $header-color-start;
 
 $screen-sm-min: 580px;
 
