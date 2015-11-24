@@ -32,7 +32,9 @@ app.component('bbcRecipePage', {
     <div ng-if="bbcRecipePage.found === true">
         <div class="row">
             <div class="col-sm-6 col-md-4">
-                <img ng-src="{{ bbcRecipePage.recipe.image }}">
+                <div ng-if="bbcRecipePage.recipe.image">
+                    <img class="recipe--image" ng-src="{{ bbcRecipePage.recipe.image }}">
+                </div>
                 <div class="recipe--star-row" ng-class="{'recipe--star-row-active': bbcRecipePage.isStarred}">
                     <a ng-click="bbcRecipePage.toggleStar()">
                         <span ng-if="bbcRecipePage.isStarred">

@@ -11,7 +11,7 @@ app.component('bbcRecipeCard', {
                 <div class="recipe--body">
                     <h3>{{ bbcRecipeCard.item.name }}</h3>
                     <p class="recipe--time"><i class="fa fa-clock-o"></i> {{ bbcRecipeCard.item.cooking_time }} minutes</p>
-                    <div>
+                    <div class="recipe--ingredients-list">
                         <span class="recipe--ingredient" ng-repeat="ingredient in bbcRecipeCard.item.ingredients">{{ ingredient.name }}</span>
                     </div>
                 </div>
