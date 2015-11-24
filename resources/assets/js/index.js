@@ -37,6 +37,10 @@ app.config(function($stateProvider, $locationProvider, $urlRouterProvider) {
 
 app.filter('fromPage', function() {
     return function(arr, page, perPage) {
+        if (!Array.isArray(arr)) {
+            return false;
+        }
+
         let start = perPage * (page - 1);
         return arr.slice(start, start + perPage);
     }

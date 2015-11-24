@@ -43,8 +43,11 @@ app.component('bbcRecipesBrowse', {
             return false;
         };
 
-        $http.get('/api/recipes').success((data) => {
+        $http.get('/api/recipes' + (this.starred ? '/starred' : '')).success((data) => {
+            this.found = true;
             this.recipes = data;
+        }).error(() => {
+            this.found = false;
         });
     },
     template: `
@@ -54,8 +57,8 @@ app.component('bbcRecipesBrowse', {
             <input class="search--input" ng-model="bbcRecipesBrowse.searchQuery" placeholder="Search">
         </div>
     </div>
-    <div ng-if="bbcRecipesBrowse.recipes !== undefined">
-        <div class="warning--empty" ng-if="!(bbcRecipesBrowse.recipes | filter:bbcRecipesBrowse.search).length">
+    <div ng-if="bbcRecipesBrowse.recipes !== undefined || bbcRecipesBrowse.found === false">
+        <div class="warning--empty" ng-if="bbcRecipesBrowse.found === false || !(bbcRecipesBrowse.recipes | filter:bbcRecipesBrowse.search).length">
             Sorry, we currently have no recipes for you
         </div>
         <div class="recipes--list block-grid-xs-1 block-grid-sm-3 block-grid-md-4">
