@@ -16,6 +16,10 @@ app.component('bbcRecipesBrowse', {
         this.page = parseInt($stateParams.page, 10);
         this.perPage = 10;
 
+        this.resetPage = () => {
+            this.page = 1;
+        };
+
         this.search = (item) => {
             if (!this.searchQuery) {
                 return true; // If search query is empty, show all
@@ -54,7 +58,7 @@ app.component('bbcRecipesBrowse', {
     <div class="search">
         <div class="search--hold">
             <i class="fa fa-search"></i>
-            <input class="search--input" ng-model="bbcRecipesBrowse.searchQuery" placeholder="Search">
+            <input class="search--input" ng-model="bbcRecipesBrowse.searchQuery" ng-click="bbcRecipesBrowse.resetPage()" placeholder="Search">
         </div>
     </div>
     <div ng-if="bbcRecipesBrowse.recipes !== undefined || bbcRecipesBrowse.found === false">
