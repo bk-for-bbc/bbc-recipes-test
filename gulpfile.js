@@ -11,6 +11,11 @@ var elixir = require('laravel-elixir');
  |
  */
 
+elixir.config.js.browserify.transformers.push({
+    name: 'bulkify',
+    options: {}
+});
+
 elixir(function(mix) {
     mix.sass('app.scss');
     mix.browserify('index.js');
