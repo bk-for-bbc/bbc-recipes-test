@@ -18,7 +18,7 @@ img {
 h2 {
     border-bottom: 1px solid $gray-lighter;
     padding-bottom: $grid-gutter-width / 2;
-    margin-bottom: $grid-gutter-width * 1.5;
+    margin-bottom: $grid-gutter-width;
 }
 
 .warning--empty {
@@ -42,6 +42,26 @@ h2 {
 
         &:hover {
             text-decoration: none;
+        }
+    }
+}
+
+.pager {
+    margin-top: $grid-gutter-width;
+
+    li {
+        padding: 0 $grid-gutter-width / 2;
+
+        &.disabled {
+            pointer-events: none;
+            opacity: 0.5;
+        }
+
+        a:hover {
+            cursor: pointer;
+            background: none;
+            border-color: $brand-primary;
+            color: $brand-primary;
         }
     }
 }
