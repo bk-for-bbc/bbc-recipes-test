@@ -60,6 +60,8 @@ If you are unfamiliar with the layout of the Laravel framework, my work can be f
 
 `tests/**/*`
 
+The Angular app is located in `resources/assets/js`. Components can be found in the `components` folder, while `index.js` sets up all non-component elements such as filters and routes.
+
 ## Notes
 
 I wanted the frontend to be a Single-Page-App so that the user experience would be smooth, particularly with filtering and managing a user's stars. However this approach has downsides, such as a lack of SEO which would be important for a recipes site. With more time, I would move the app to being isomorphic; the client-side app rendered on the server and progressively enhanced in the browser once the frontend scripts have loaded.
