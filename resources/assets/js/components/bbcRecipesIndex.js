@@ -40,7 +40,7 @@ app.component('bbcRecipesIndex', {
         <div ng-if="bbcRecipesIndex.recipes.length > bbcRecipesIndex.perPage">
             <ul class="pager">
                 <li ng-class="{disabled: bbcRecipesIndex.page === 1}"><a ng-click="bbcRecipesIndex.jumpPage(-1);">Previous</a></li>
-                <li ng-class="{disabled: (bbcRecipesIndex.perPage * bbcRecipesIndex.page) > bbcRecipesIndex.recipes.length}"><a ng-click="bbcRecipesIndex.jumpPage(1);">Next</a></li>
+                <li ng-class="{disabled: (bbcRecipesIndex.perPage * bbcRecipesIndex.page) >= bbcRecipesIndex.recipes.length}"><a ng-click="bbcRecipesIndex.jumpPage(1);">Next</a></li>
             </ul>
         </div>
     </div>`
