@@ -33,12 +33,12 @@ class RecipeSeed extends Seeder
                 ]
             ],
             [
-                'name' => 'Caesar Salad',
+                'name' => 'Chicken Caesar Salad',
                 'cooking_time' => 25,
                 'image' => '/images/recipes/caesar_salad.png',
                 'ingredients' => [
                     [1, 'Lettuce'],
-                    [2, 'Croutons'],
+                    [2, 'Chicken'],
                     [1, 'Parmesan']
                 ]
             ]
