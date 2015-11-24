@@ -1,6 +1,3 @@
-.recipes--list {
-}
-
 .recipe {
     display: inline-block;
     vertical-align: top;
@@ -37,6 +34,7 @@ a.recipe--link {
     color: $gray;
     padding: 1px 6px;
     margin-right: 5px;
+    margin-bottom: 5px;
 }
 
 .recipe--ingredients-table {
