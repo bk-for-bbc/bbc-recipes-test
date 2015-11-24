@@ -14,7 +14,6 @@ app.component('bbcRecipesIndex', {
 
         $http.get('/api/recipes').success((data) => {
             this.recipes = data;
-            console.log('Index', this.recipes);
         });
     },
     template: `
