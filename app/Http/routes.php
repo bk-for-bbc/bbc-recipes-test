@@ -23,6 +23,14 @@ Route::group(['prefix' => 'api'], function() {
     Route::get('me/starred', function() {
         return App\User::findOrFail(1)->starred;
     });
+
+    Route::post('me/starred/{id}', function($id) {
+        return App\User::findOrFail(1)->starred()->attach($id);
+    });
+
+    Route::delete('me/starred/{id}', function($id) {
+        return App\User::findOrFail(1)->starred()->detach($id);
+    });
 });
 
 Route::get('{catchall}', function() {

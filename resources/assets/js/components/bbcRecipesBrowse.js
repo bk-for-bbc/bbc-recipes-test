@@ -43,7 +43,7 @@ app.component('bbcRecipesBrowse', {
             return false;
         };
 
-        $http.get('/api/recipes' + (this.starred ? '/starred' : '')).success((data) => {
+        $http.get('/api' + (this.starred ? '/me/starred' : '/recipes')).success((data) => {
             this.found = true;
             this.recipes = data;
         }).error(() => {

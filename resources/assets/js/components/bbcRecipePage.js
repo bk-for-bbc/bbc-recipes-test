@@ -4,7 +4,20 @@ app.component('bbcRecipePage', {
     bindings: {
         slug: '@'
     },
-    controller($http) {
+    controller($http, $filter) {
+        this.toggleStar = () => {
+            this.isStarred = !this.isStarred;
+            if (this.isStarred === true) {
+                $http.post('/api/me/starred/' + this.recipe.id);
+            } else {
+                $http.delete('/api/me/starred/' + this.recipe.id);
+            }
+        };
+
+        $http.get('/api/me/starred').success((data) => {
+            this.isStarred = $filter('filter')(data, {slug: this.slug}).length ? true : false;
+        });
+
         $http.get('/api/recipes/' + this.slug).success((data) => {
             this.found = true;
             this.recipe = data;
@@ -20,6 +33,16 @@ app.component('bbcRecipePage', {
         <div class="row">
             <div class="col-sm-6 col-md-4">
                 <img ng-src="{{ bbcRecipePage.recipe.image }}">
+                <div class="recipe--star-row" ng-class="{'recipe--star-row-active': bbcRecipePage.isStarred}">
+                    <a ng-click="bbcRecipePage.toggleStar()">
+                        <span ng-if="bbcRecipePage.isStarred">
+                            <i class="fa fa-star"></i>Starred
+                        </span>
+                        <span ng-if="!bbcRecipePage.isStarred">
+                            <i class="fa fa-star-o"></i>Star this Recipe
+                        </span>
+                    </a>
+                </div>
             </div>
             <div class="col-sm-6 col-md-8">
                 <h3>{{ bbcRecipePage.recipe.name }}</h3>

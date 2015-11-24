@@ -48,3 +48,24 @@ a.recipe--link {
         white-space: nowrap;
     }
 }
+
+.recipe--star-row {
+    margin-top: $grid-gutter-width / 2;
+    text-align: center;
+    font-size: $font-size-large;
+
+    a:hover {
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    i {
+        margin-right: 5px;
+    }
+
+    &.recipe--star-row-active {
+        a {
+            color: $header-color-start;
+        }
+    }
+}
