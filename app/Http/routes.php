@@ -21,7 +21,7 @@ Route::group(['prefix' => 'api'], function() {
     });
 
     Route::get('me/starred', function() {
-        return App\User::findOrFail(1)->starred;
+        return App\User::findOrFail(1)->starred()->with('ingredients')->get();
     });
 
     Route::post('me/starred/{id}', function($id) {
