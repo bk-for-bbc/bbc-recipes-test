@@ -9,7 +9,7 @@
     <body>
         <header class="header">
             <div class="container--main">
-                <a class="logo" href="/" target="_self">
+                <a class="logo" href="/">
                     <img src="/images/logo.svg">
                     <span>Recipes</span>
                 </a>
