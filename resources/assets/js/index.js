@@ -9,6 +9,7 @@ app.config(function($stateProvider, $locationProvider, $urlRouterProvider) {
     $stateProvider
         .state('index', {
             url: "/?page",
+            abstract: true,
             params: {
                 page: {
                     value: '1',
@@ -16,6 +17,14 @@ app.config(function($stateProvider, $locationProvider, $urlRouterProvider) {
                 }
             },
             template: `<bbc-recipes-index></bbc-recipes-index>`
+        })
+        .state('index.browse', {
+            url: '',
+            template: `<bbc-recipes-browse starred="false"></bbc-recipes-browse>`
+        })
+        .state('index.starred', {
+            url: 'starred',
+            template: `<bbc-recipes-browse starred="true"></bbc-recipes-browse>`
         })
         .state('recipe', {
             url: "/recipes/:slug",
