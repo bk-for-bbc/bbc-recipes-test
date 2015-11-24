@@ -5,10 +5,18 @@ $header-color-start: #FF9D2C;
 $header-color-end: #EE5C00;
 $brand-primary: $header-color-end;
 
+$screen-sm-min: 580px;
+
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 @import url(https://fonts.googleapis.com/css?family=Lato:300);
+@import "node_modules/include-media/dist/_include-media";
 
+// Import components
 @import "components/_header";
 @import "components/_recipes";
 
+// Import layouts
 @import "layouts/_global";
+
+// Import vendor files (third-party)
+@import "vendor/blockgrid";

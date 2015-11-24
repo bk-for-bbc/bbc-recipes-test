@@ -2,9 +2,10 @@
 <html ng-app="bbc-recipes">
     <head>
         <title>BBC Recipes</title>
-        <base href="/"></base>
-        <link rel="stylesheet" href="/css/app.css"></link>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <base href="/" />
+        <link rel="stylesheet" href="/css/app.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
     </head>
     <body>
         <header class="header">

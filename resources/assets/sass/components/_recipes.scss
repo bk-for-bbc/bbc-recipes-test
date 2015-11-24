@@ -1,13 +1,9 @@
 .recipes--list {
-    margin: 0 -($grid-gutter-width / 2);
-    text-align: left;
 }
 
 .recipe {
     display: inline-block;
     vertical-align: top;
-    width: 250px;
-    margin: 0 $grid-gutter-width / 2 $grid-gutter-width;
     margin-top: 0;
 }
 
@@ -45,7 +41,7 @@ a.recipe--link {
 
 .recipe--ingredients-table {
     .table {
-        max-width: 50%;
+        max-width: 400px;
         width: 100%;
     }
 

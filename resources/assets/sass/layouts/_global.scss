@@ -1,3 +1,7 @@
+body {
+    padding-bottom: $grid-gutter-width;
+}
+
 .container--main {
     width: 100%;
     max-width: 1124px;

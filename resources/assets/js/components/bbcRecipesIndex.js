@@ -13,7 +13,7 @@ app.component('bbcRecipesIndex', {
         <div class="warning--empty" ng-if="!bbcRecipesIndex.recipes.length">
             Sorry, we currently have no recipes for you
         </div>
-        <div class="recipes--list">
+        <div class="recipes--list block-grid-xs-1 block-grid-sm-3 block-grid-md-4">
             <div class="recipe" ng-repeat="recipe in bbcRecipesIndex.recipes">
                 <a class="recipe--link" ng-href="/recipes/{{ recipe.slug }}">
                     <img class="recipe--image" ng-src="{{ recipe.image }}">
