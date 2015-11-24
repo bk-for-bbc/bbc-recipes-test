@@ -8,6 +8,8 @@ To install the app, from the top directory run:
 
 `npm install`
 
+This will automatically run all necessary installation commands, as specified in `scripts.postinstall` of `package.json`
+
 If you do not have Composer installed, installation instructions can be found [here](https://getcomposer.org/doc/00-intro.md). If you run into further issues installing the app, the [Laravel Installation page](http://laravel.com/docs/5.1/installation) should be able to help.
 
 ## Serving the Application
