@@ -42,3 +42,15 @@ a.recipe--link {
     padding: 1px 6px;
     margin-right: 5px;
 }
+
+.recipe--ingredients-table {
+    .table {
+        max-width: 50%;
+        width: 100%;
+    }
+
+    .recipe--ingredients-table-qty {
+        width: 50px;
+        white-space: nowrap;
+    }
+}
