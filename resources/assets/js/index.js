@@ -8,7 +8,13 @@ app.config(function($stateProvider, $locationProvider, $urlRouterProvider) {
 
     $stateProvider
         .state('index', {
-            url: "/",
+            url: "/?page",
+            params: {
+                page: {
+                    value: '1',
+                    squash: true
+                }
+            },
             template: `<bbc-recipes-index></bbc-recipes-index>`
         })
         .state('recipe', {

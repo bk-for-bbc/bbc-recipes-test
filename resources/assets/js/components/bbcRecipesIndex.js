@@ -1,15 +1,16 @@
 const app = require('../app');
 
 app.component('bbcRecipesIndex', {
-    controller($http, $state) {
+    controller($http, $stateParams, $state) {
         this.jumpPage = function(pageOffset) {
-            this.page = this.page + pageOffset;
-            if (this.page < 1) {
-                this.page = 1;
+            let newPage = this.page + pageOffset;
+            if (newPage < 1) {
+                newPage = 1;
             }
+            $state.go('.', {page: newPage});
         };
 
-        this.page = 1;
+        this.page = parseInt($stateParams.page, 10);
         this.perPage = 10;
 
         $http.get('/api/recipes').success((data) => {
