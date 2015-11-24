@@ -1,23 +1,26 @@
 {
-  "private": true,
-  "devDependencies": {
-    "gulp": "^3.8.8",
-    "protractor": "^3.0.0"
-  },
-  "dependencies": {
-    "angular": "^1.5.0-beta.2",
-    "angular-ui-router": "^0.2.15",
-    "babel-preset-es2015": "^6.1.18",
-    "babel-preset-react": "^6.1.18",
-    "bootstrap-sass": "^3.0.0",
-    "bulk-require": "^0.2.1",
-    "bulkify": "^1.1.1",
-    "laravel-elixir": "^4.0.4"
-  },
-  "babel": {
-    "presets": [
-      "es2015",
-      "react"
-    ]
-  }
+    "private": true,
+    "devDependencies": {
+        "gulp": "^3.8.8",
+        "protractor": "^3.0.0"
+    },
+    "dependencies": {
+        "angular": "^1.5.0-beta.2",
+        "angular-ui-router": "^0.2.15",
+        "babel-preset-es2015": "^6.1.18",
+        "babel-preset-react": "^6.1.18",
+        "bootstrap-sass": "^3.0.0",
+        "bulk-require": "^0.2.1",
+        "bulkify": "^1.1.1",
+        "laravel-elixir": "^4.0.4"
+    },
+    "babel": {
+        "presets": [
+            "es2015",
+            "react"
+        ]
+    },
+    "scripts": {
+        "postinstall": "gulp && composer install && touch database/database.sqlite"
+    }
 }
