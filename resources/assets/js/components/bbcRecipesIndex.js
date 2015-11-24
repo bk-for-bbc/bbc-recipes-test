@@ -61,18 +61,7 @@ app.component('bbcRecipesIndex', {
             Sorry, we currently have no recipes for you
         </div>
         <div class="recipes--list block-grid-xs-1 block-grid-sm-3 block-grid-md-4">
-            <div class="recipe" ng-repeat="recipe in bbcRecipesIndex.recipes | filter:bbcRecipesIndex.search | fromPage:bbcRecipesIndex.page:bbcRecipesIndex.perPage">
-                <a class="recipe--link" ng-href="/recipes/{{ recipe.slug }}">
-                    <img class="recipe--image" ng-src="{{ recipe.image }}">
-                    <div class="recipe--body">
-                        <h3>{{ recipe.name }}</h3>
-                        <p class="recipe--time"><i class="fa fa-clock-o"></i> {{ recipe.cooking_time }} minutes</p>
-                        <div>
-                            <span class="recipe--ingredient" ng-repeat="ingredient in recipe.ingredients">{{ ingredient.name }}</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
+            <bbc-recipe-card item="recipe" ng-repeat="recipe in bbcRecipesIndex.recipes | filter:bbcRecipesIndex.search | fromPage:bbcRecipesIndex.page:bbcRecipesIndex.perPage"></bbc-recipe-card>
         </div>
         <div ng-if="(bbcRecipesIndex.recipes | filter:bbcRecipesIndex.search).length > bbcRecipesIndex.perPage">
             <ul class="pager">
