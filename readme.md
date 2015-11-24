@@ -4,15 +4,9 @@ Hi, my name is Ben King, and this is my BBC Recipes test app. The app uses a PHP
 
 ## Installation
 
-To install the app, run the following commands from the top directory:
+To install the app, from the top directory run:
 
 `npm install`
-
-`gulp`
-
-`composer install`
-
-`touch database/database.sqlite`
 
 If you do not have Composer installed, installation instructions can be found [here](https://getcomposer.org/doc/00-intro.md). If you run into further issues installing the app, the [Laravel Installation page](http://laravel.com/docs/5.1/installation) should be able to help.
 
