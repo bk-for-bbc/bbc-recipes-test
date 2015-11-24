@@ -19,6 +19,10 @@ Route::group(['prefix' => 'api'], function() {
     Route::get('recipes/{slug}', function($slug) {
         return App\Recipe::where('slug', $slug)->with('ingredients')->firstOrFail();
     });
+
+    Route::get('me/starred', function() {
+        return App\User::findOrFail(1)->starred;
+    });
 });
 
 Route::get('{catchall}', function() {
