@@ -36,5 +36,5 @@ Route::group(['prefix' => 'api'], function() {
 });
 
 Route::get('{catchall}', function() {
-    return view('app');
+    return view('app'); // This means all routes that don't begin with api/ will use the Angular app, which will take over with its own router
 })->where('catchall', '(.*)');
