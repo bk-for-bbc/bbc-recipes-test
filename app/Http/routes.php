@@ -25,11 +25,13 @@ Route::group(['prefix' => 'api'], function() {
     });
 
     Route::post('me/starred/{id}', function($id) {
-        return App\User::findOrFail(1)->starred()->attach($id);
+        App\User::findOrFail(1)->starred()->attach($id);
+        return [(int) $id];
     });
 
     Route::delete('me/starred/{id}', function($id) {
-        return App\User::findOrFail(1)->starred()->detach($id);
+        App\User::findOrFail(1)->starred()->detach($id);
+        return [];
     });
 });
 
