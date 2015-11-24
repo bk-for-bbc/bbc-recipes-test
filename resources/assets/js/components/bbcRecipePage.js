@@ -18,10 +18,10 @@ app.component('bbcRecipePage', {
     </div>
     <div ng-if="bbcRecipePage.found === true">
         <div class="row">
-            <div class="col-sm-3">
+            <div class="col-sm-6 col-md-4">
                 <img ng-src="{{ bbcRecipePage.recipe.image }}">
             </div>
-            <div class="col-sm-9">
+            <div class="col-sm-6 col-md-8">
                 <h3>{{ bbcRecipePage.recipe.name }}</h3>
                 <p class="recipe--time"><i class="fa fa-clock-o"></i> {{ bbcRecipePage.recipe.cooking_time }} minutes</p>
                 <div class="recipe--ingredients-table">
