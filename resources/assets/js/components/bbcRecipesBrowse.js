@@ -4,7 +4,7 @@ app.component('bbcRecipesBrowse', {
     bindings: {
         starred: '='
     },
-    controller($http, $stateParams, $state) {
+    controller($http, $stateParams, $state, $filter) {
         this.jumpPage = function(pageOffset) {
             let newPage = this.page + pageOffset;
             if (newPage < 1) {
@@ -50,6 +50,10 @@ app.component('bbcRecipesBrowse', {
         $http.get('/api' + (this.starred ? '/me/starred' : '/recipes')).success((data) => {
             this.found = true;
             this.recipes = data;
+
+            if (!$filter('fromPage')(this.recipes, this.page, this.perPage).length) {
+                $state.go('.', {page: 1});
+            }
         }).error(() => {
             this.found = false;
         });
