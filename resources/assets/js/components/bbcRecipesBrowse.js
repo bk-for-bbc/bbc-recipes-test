@@ -70,7 +70,10 @@ app.component('bbcRecipesBrowse', {
             <span ng-if="bbcRecipesBrowse.starred === true">
                 Sorry, you don't currently have any starred recipes, get started by starring recipes you like
             </span>
-            <span ng-if="bbcRecipesBrowse.starred === false">
+            <span ng-if="bbcRecipesBrowse.starred === false && bbcRecipesBrowse.searchQuery">
+                Sorry, nothing matched your filter term
+            </span>
+            <span ng-if="bbcRecipesBrowse.starred === false && !bbcRecipesBrowse.searchQuery">
                 Sorry, we currently have no recipes for you
             </span>
         </div>
